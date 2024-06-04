@@ -54,6 +54,7 @@ def forward_propagation(X, params):
         'Z2': Z2,
         'A2': A2
       }
+        self.parameters['W1'] = W1 - learning_rate * self.gradients['dW1']
     return A2, cache
 
 def compute_cost(A2, y):
